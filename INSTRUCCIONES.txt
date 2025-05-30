@@ -1,0 +1,38 @@
+# Proyecto Meteorológico Laravel - Trevenque - Enrique Gómez Iruela
+
+## Requisitos
+- PHP 8.x
+- Composer
+- MySQL o MariaDB
+- Node.js (opcional si se recompilan assets)
+- Laravel 10/11
+- Acceso a Internet (para usar Eltiempo.net)
+
+## Instalación
+
+1. Clonar o descomprimir el proyecto:
+
+    tar -xzf proyecto-tiempo.tar.gz
+
+2. Instalar dependencias:
+
+    composer install
+
+3. Crear `.env` y configurar base de datos:
+
+    cp .env.example .env
+    # Editar .env con tus credenciales DB
+    php artisan key:generate
+
+4. Crear base de datos vacía y ejecutar:
+
+    php artisan migrate --seed
+
+5. Arrancar servidor:
+
+    php artisan serve --host=0.0.0.0 --port=8000
+
+## Notas
+   
+   Si se vacían las tablas de la base de datos, ejecutar los seeders.
+
